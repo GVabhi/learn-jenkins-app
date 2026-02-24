@@ -2,15 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('w/o Docker') {
+        stage('Stage 1') {
             steps {
                 sh ''' 
-                echo "WithOut Docker"
-                touch container-no.txt
                 '''
             }
         }
-        stage('w Docker'){
+        stage('Stage 2'){
             agent{
                 docker{
                     image 'node:18-alpine'
@@ -19,8 +17,7 @@ pipeline {
             }
             steps {
                 sh '''
-                echo "With Docker"
-                touch container-yes.txt
+                echo "Docker Image Deployed"
                 '''
             }
         }
