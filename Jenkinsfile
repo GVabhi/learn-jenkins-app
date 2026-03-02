@@ -19,7 +19,7 @@ pipeline
                 npm  --version
                 echo "Build Stage completed"
                 npm ci 
-                npm run Build
+                npm run build
                 ls -la
                 '''
             }
