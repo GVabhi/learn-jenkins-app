@@ -15,8 +15,8 @@ pipeline
             {
                 sh '''
                 ls -la
-                node -version 
-                npm  -version
+                node --version 
+                npm  --version
                 echo "Build Stage completed"
                 npm ci 
                 npm run Build
